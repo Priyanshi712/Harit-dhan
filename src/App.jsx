@@ -1175,9 +1175,8 @@ export default function App() {
   };
 
   return (
-    <div style={{ display: "flex", justifyContent: "center", alignItems: "flex-start", minHeight: "100vh", background: dark ? "#050F07" : "#1A3D1F", padding: "20px 0", fontFamily: "'DM Sans', 'Segoe UI', sans-serif", transition: "background 0.3s" }}>
-      <div style={{ width: "390px", minHeight: "844px", background: C.screenBg, borderRadius: "40px", overflow: "hidden", boxShadow: `0 30px 80px rgba(0,0,0,0.5), 0 0 0 12px ${dark ? "#0A1F10" : "#0F2B12"}, 0 0 0 14px ${dark ? "#1A3D1F" : "#234D28"}`, display: "flex", flexDirection: "column", position: "relative", transition: "background 0.3s" }}>
-
+    <div style={{ minHeight: "100vh", background: C.screenBg, fontFamily: "'DM Sans', 'Segoe UI', sans-serif", transition: "background 0.3s" }}>
+      <div style={{ maxWidth: "600px", margin: "0 auto", minHeight: "100vh", background: C.screenBg, display: "flex", flexDirection: "column", position: "relative" }}>
         {/* Status bar */}
         <div style={{ height: "44px", background: isApp ? C.topBarBg : "transparent", display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 24px", flexShrink: 0, zIndex: 50, transition: "background 0.3s" }}>
           <span style={{ fontSize: "13px", fontWeight: "700", color: C.navy }}>9:41</span>
