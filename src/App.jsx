@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { useAuth } from "./context/AuthContext";
 
 // ─── DARK MODE CONTEXT ────────────────────────────────────────────────────────
 // Colors are computed dynamically based on dark mode state
@@ -645,7 +646,7 @@ const OverviewScreen = ({ onNavigate, dark, onToggleDark, C, S }) => {
         right={
           <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
             <DarkModeToggle dark={dark} onToggle={onToggleDark} C={C} />
-            <div style={{ fontSize: "13px", fontWeight: "600", color: C.gray500, display: "flex", alignItems: "center", gap: "6px" }}><Icon name="user" size={14} color={C.gray400} />PRIYANSHI</div>
+            <div style={{ fontSize: "13px", fontWeight: "600", color: C.gray500, display: "flex", alignItems: "center", gap: "6px" }}><Icon name="user" size={14} color={C.gray400} />{user?.email?.split("@")[0]?.toUpperCase() || "USER"}</div>
           </div>
         }
         C={C}
@@ -1118,6 +1119,7 @@ const MonitoringScreen = ({ onNavigate, dark, onToggleDark, C, S }) => {
 
 // ─── APP ROOT ─────────────────────────────────────────────────────────────────
 export default function App() {
+  const { user } = useAuth();
   const [page, setPage] = useState("landing");
   const [activeTab, setActiveTab] = useState("overview");
   const [dark, setDark] = useState(false);
