@@ -1,4 +1,6 @@
 import { useState, useEffect, useRef } from "react";
+import LoginScreen from "./components/LoginScreen";
+import SignupScreen from "./components/SignupScreen";
 
 // ─── DARK MODE CONTEXT ────────────────────────────────────────────────────────
 // Colors are computed dynamically based on dark mode state
