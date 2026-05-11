@@ -1119,6 +1119,7 @@ const MonitoringScreen = ({ onNavigate, dark, onToggleDark, C, S }) => {
 
 // ─── APP ROOT ─────────────────────────────────────────────────────────────────
 export default function App() {
+  
   const { user } = useAuth();
   const [page, setPage] = useState("landing");
   const [activeTab, setActiveTab] = useState("overview");
@@ -1173,6 +1174,9 @@ export default function App() {
       case "marketplace": return <MarketplaceScreen {...sharedProps} />;
       case "monitoring": return <MonitoringScreen {...sharedProps} />;
       default: return <OverviewScreen {...sharedProps} />;
+
+      export default function App() {
+  const { user } = useAuth();  // ← yeh line hai?
     }
   };
 
